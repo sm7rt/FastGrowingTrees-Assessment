@@ -27,13 +27,13 @@ export async function getStaticProps() {
 export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
+      <Head>
+        <title>Fastest Growing Trees</title>
+        <meta name="description" content="Trees. Delivered. Yesterday." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main>
-        <Head>
-          <title>Fastest Growing Trees</title>
-          <meta name="description" content="Trees. Delivered. Yesterday." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <SimpleGrid columns={[1, null, 2, 3]} spacing={8}>
           {products.map(({ src, title, id }) => (
             <Link href={`/product/${encodeURIComponent(id)}`} key={id}>

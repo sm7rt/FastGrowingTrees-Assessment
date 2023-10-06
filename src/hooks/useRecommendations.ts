@@ -70,7 +70,7 @@ export function useRecommendations(): RecommendationsFetchState {
         }
       } catch (error) {
         dispatchFetchData({ type: 'error' });
-        console.error(`error: ${error}`);
+        // console.error(`error: ${error}`);
       }
     };
 
